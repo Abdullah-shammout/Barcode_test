@@ -1,0 +1,32 @@
+﻿@model List<BarcodeTypes>;
+@{
+    ViewData["Title"] = "Barcode List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Barcode Types List</h1>
+
+<div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Barcode Id&nbsp;</th>
+                <th>Barcode</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @{
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Barcode Id</td>
+                        <td>@item.Barcode</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+</div>
